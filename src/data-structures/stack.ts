@@ -1,4 +1,4 @@
-class Stack<T> {
+export default class Stack<T> {
   private count: number;
   private items: any;
 
@@ -55,5 +55,3 @@ class Stack<T> {
     return str;
   }
 }
-
-export default Stack;
