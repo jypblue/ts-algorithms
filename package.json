@@ -1,0 +1,27 @@
+{
+  "name": "ts-structures-algorithms",
+  "version": "1.0.0",
+  "description": "a ts project for js structures and algorithms practice ",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jypblue/ts-structures-algorithms.git"
+  },
+  "keywords": [
+    "ts",
+    "structures",
+    "algorithms"
+  ],
+  "author": "zx.wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jypblue/ts-structures-algorithms/issues"
+  },
+  "homepage": "https://github.com/jypblue/ts-structures-algorithms#readme",
+  "devDependencies": {
+    "ts-node": "^8.3.0",
+    "tslint": "^5.19.0",
+    "typescript": "^3.5.3"
+  }
+}
