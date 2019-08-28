@@ -1,3 +1,4 @@
+// 数组实现栈
 export default class StackArray<T> {
   private items: T[];
 

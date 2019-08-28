@@ -1,30 +1,38 @@
+/**
+ * 队列
+ */
 
-// 对象实现栈
-export default class Stack<T> {
+export default class Queue<T> {
   private count: number;
+  private lowestCount: number;
   private items: any;
 
   constructor() {
     this.count = 0;
+    this.lowestCount = 0;
     this.items = {};
   }
 
-  push(element: T) {
+  enqueue(element: T) {
     this.items[this.count] = element;
     this.count++;
   }
 
-  isEmpty() {
-    return this.count === 0;
+  size() {
+    return this.count - this.lowestCount;
   }
 
-  pop() {
+  isEmpty() {
+    return this.size() === 0;
+  }
+
+  dequeue() {
     if (this.isEmpty()) {
       return undefined;
     }
-    this.count--;
-    const result = this.items[this.count];
-    delete this.items[this.count];
+    const result = this.items[this.lowestCount];
+    delete this.items[this.lowestCount];
+    this.lowestCount++;
     return result;
   }
 
@@ -32,16 +40,13 @@ export default class Stack<T> {
     if (this.isEmpty()) {
       return undefined;
     }
-    return this.items[this.count - 1];
-  }
-
-  size() {
-    return this.count;
+    return this.items[this.lowestCount];
   }
 
   clear() {
-    this.count = 0;
     this.items = {};
+    this.count = 0;
+    this.lowestCount = 0;
   }
 
   toString() {
@@ -56,4 +61,5 @@ export default class Stack<T> {
 
     return str;
   }
+
 }
