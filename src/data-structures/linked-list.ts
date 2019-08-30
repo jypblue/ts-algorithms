@@ -1,5 +1,5 @@
 /**
- * 链表
+ * 链表-基本链表
  */
 
 import { defaultEquals, IEqualsFunction } from '../util';
