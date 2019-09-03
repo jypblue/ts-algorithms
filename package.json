@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "a ts project for js structures and algorithms practice ",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc -p ./ --rootDir ./src",
+    "serve": "http-server"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jypblue/ts-structures-algorithms.git"
@@ -20,8 +23,9 @@
   },
   "homepage": "https://github.com/jypblue/ts-structures-algorithms#readme",
   "devDependencies": {
+    "http-server": "^0.11.1",
     "ts-node": "^8.3.0",
     "tslint": "^5.19.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.2"
   }
 }
