@@ -5,12 +5,11 @@
 import {
   defaultEquals,
   IEqualsFunction
-} from '../utils';
+} from '../util';
 
 import LinkedList from './linked-list';
 
 import { DoublyNode } from './models/linked-list-models';
-import { IEqualsFunction } from '../util';
 
 
 export default class DoublyLinkedList<T> extends LinkedList<T> {
@@ -131,10 +130,28 @@ export default class DoublyLinkedList<T> extends LinkedList<T> {
   }
 
   toString() {
-
+    if (this.head == null) {
+      return '';
+    }
+    let objString = `${this.head.element}`;
+    let current = this.head.next;
+    while (current != null) {
+      objString = `${objString},${current.element}`;
+      current = current.next;
+    }
+    return objString;
   }
 
   inverseToString() {
-
+    if (this.tail == null) {
+      return '';
+    }
+    let objString = `${this.tail.element}`;
+    let previous = this.tail.prev;
+    while (previous != null) {
+      objString = `${objString},${previous.element}`;
+      previous = previous.prev;
+    }
+    return objString;
   }
 }

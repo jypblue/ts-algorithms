@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p ./ --rootDir ./src",
+    "watch": "tsc -w",
     "serve": "http-server"
   },
   "repository": {
