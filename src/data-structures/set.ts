@@ -64,7 +64,7 @@ export default class Set<T> {
     return intersectionSet;
   }
 
-  // 两个队列取或
+  // 两个队列取差集
   difference(otherSet:Set<T>) {
     const differenceSet = new Set<T>();
     this.values().forEach(value => {
@@ -88,7 +88,7 @@ export default class Set<T> {
         return false;
       }
       return true;
-    })
+    });
 
 
     return isSubset;
