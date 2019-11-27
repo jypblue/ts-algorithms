@@ -55,7 +55,7 @@ export default class CircularLinkedList<T> extends LinkedList<T> {
       this.count++;
       return true;
     }
-    return false
+    return false;
   }
 
   removeAt(index: number) {
