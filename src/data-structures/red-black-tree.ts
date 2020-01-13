@@ -102,7 +102,13 @@ export default class RedBlackTree<T> extends BinarySearchTree<T> {
   }
 
   protected insertNode(node: RedBlackNode<T>, key: T): RedBlackNode<T> {
+    if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
 
+    } else if (node.right == null) {
+
+    } else {
+
+    }
   }
 
   private fixTreeProperties(node: RedBlackNode<T>) {
