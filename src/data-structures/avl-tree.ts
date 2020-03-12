@@ -10,7 +10,7 @@ enum BalanceFactor {
   UNBALANCED_LEFT = 5
 }
 export default class AVLTree<T> extends BinarySearchTree<T> {
-  constructor(protected compareFn: ICompareFunction<t> = defaultCompare) {
+  constructor(protected compareFn: ICompareFunction<T> = defaultCompare) {
     super(compareFn);
   }
 

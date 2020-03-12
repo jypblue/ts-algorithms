@@ -45,7 +45,7 @@ export default class Deque<T> {
     this.count++;
    }
 
-  addFront(element:T) {
+  addFront(element: T) {
     if (this.isEmpty()) {
       this.addBack(element);
     } else if (this.lowestCount > 0) {

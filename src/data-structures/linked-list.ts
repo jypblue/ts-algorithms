@@ -42,7 +42,7 @@ export default class LinkedList<T> {
     return undefined;
   }
 
-  insert(element:T, index:number) {
+  insert(element: T, index: number) {
     if  (index >= 0 && index <= this.count) {
       const node = new Node(element);
       if (index === 0) {
@@ -89,7 +89,7 @@ export default class LinkedList<T> {
     return -1;
   }
 
-  remove(element:T) {
+  remove(element: T) {
     const index = this.indexOf(element);
     return this.removeAt(index);
   }

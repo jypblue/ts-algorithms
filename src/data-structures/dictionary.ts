@@ -20,7 +20,7 @@ export default class Dictionary<K, V> {
     return false;
   }
 
-  get(key: K):V{
+  get(key: K): V {
     const valuePair = this.table[this.toStrFn(key)];
     return valuePair == null ? undefined : valuePair.value;
   }
@@ -49,7 +49,7 @@ export default class Dictionary<K, V> {
     return Object.values(this.table);
   }
 
-  forEach(callbackFn:(key: K, value: V) => any) {
+  forEach(callbackFn: (key: K, value: V) => any) {
     const valuePairs = this.keyValues();
     for (let i = 0; i < valuePairs.length; i++) {
       const result = callbackFn(valuePairs[i].key, valuePairs[i].value);
