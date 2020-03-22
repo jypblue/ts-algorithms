@@ -7,7 +7,7 @@
 
 // 迭代
 export function fibonacciIterative(n: number) {
-  if (n < 1) { return 0 };
+  if (n < 1) { return 0; }
   let fibNMinus2 = 0;
   let fibNMinus1 = 1;
   let fibN = n;
